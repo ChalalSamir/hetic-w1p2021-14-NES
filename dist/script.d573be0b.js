@@ -105,7 +105,95 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"js/script.js":[function(require,module,exports) {
+var character;
+var labyrinthe;
+var characterPos = {
+  x: 0,
+  y: 0
+};
+var combination = [["ltr", "lt", "tb", "tb", "t", "tb", "t", "tb", "tr", "lt", "tr", "lt", "tb", "tbr"], ["lrm", "lr", "lt", "tr", "lr", "ltb", "br", "ltr", "lb", "r", "lr", "lb", "tr", "ltr"], ["lb", "a", "br", "lr", "lr", "lt", "tb", "b", "tr", "lbr", "lb", "tr", "l", "r"], ["ltr", "lb", "tr", "lr", "lr", "lr", "ltb", "tr", "lb", "tr", "lt", "br", "lr", "lr"], ["lr", "ltr", "lr", "lr", "lbr", "lb", "tb", "br", "lt", "br", "l", "tb", "br", "lr"], ["lr", "lb", "br", "lb", "tb", "tb", "tb", "tb", "br", "ltr", "lbr", "lt", "t", "br"], ["lr", "lt", "tb", "tr", "lt", "tr", "lt", "t", "tr", "lb", "tb", "r", "lr", "ltr"], ["lr", "lr", "lt", "r", "lr", "lr", "lr", "lr", "lb", "tb", "tb", "br", "lb", "r"], ["l", "r", "lbr", "lb", "br", "lr", "lbr", "lb", "tb", "tr", "lt", "tr", "ltr", "lr"], ["lr", "lr", "lt", "tr", "ltr", "lb", "tb", "tb", "tb", "br", "lr", "lr", "lr", "lr"], ["lr", "lb", "br", "lb", "b", "tb", "t", "tb", "tb", "tb", "r", "lr", "lr", "lr"], ["lb", "tb", "tb", "tb", "tb", "tbr", "lb", "tb", "tb", "tb", "br", "lr", "lb", "br"]]; // Enter the game when pressing ente, if not already in it
 
+oxo.inputs.listenKey('enter', function () {
+  if (oxo.screens.getCurrentScreen !== 'game') {
+    oxo.screens.loadScreen('game', game);
+  }
+});
+
+function game() {
+  labyrinthe = document.getElementById('labyrinthe');
+  characterPos = {
+    x: 0,
+    y: 0
+  };
+  oxo.player.setScore(0);
+  character = document.getElementById('character'); // Get the character element
+
+  oxo.inputs.listenKey('up', function (key) {
+    if (combination[characterPos.y][characterPos.x].indexOf("t") < 0) {
+      oxo.animation.move(character, 'up', 36);
+      characterPos.y--;
+    }
+
+    console.log("key:" + key); // left, up, right or down;
+
+    console.log(characterPos.x);
+    console.log(characterPos.y);
+  });
+  oxo.inputs.listenKey('down', function (key) {
+    if (combination[characterPos.y][characterPos.x].indexOf("b") < 0) {
+      oxo.animation.move(character, 'down', 36);
+      characterPos.y++;
+    }
+
+    if (oxo.screens.getCurrentScreen !== 'end' && characterPos.y > 11) {
+      oxo.screens.loadScreen('end', end);
+    }
+
+    console.log("key:" + key); // left, up, right or down;
+
+    console.log(characterPos.x);
+    console.log(characterPos.y);
+  });
+  oxo.inputs.listenKey('left', function (key) {
+    if (combination[characterPos.y][characterPos.x].indexOf("l") < 0) {
+      oxo.animation.move(character, 'left', 36);
+      characterPos.x--;
+    }
+
+    console.log("key:" + key); // left, up, right or down;
+
+    console.log(characterPos.x);
+    console.log(characterPos.y);
+
+    if (characterPos.x === 6 && characterPos.y === 3) {
+      labyrinthe.classList.toggle('horizontal');
+    }
+  });
+  oxo.inputs.listenKey('right', function (key) {
+    if (combination[characterPos.y][characterPos.x].indexOf("r") < 0) {
+      oxo.animation.move(character, 'right', 36);
+      characterPos.x++;
+    }
+
+    if (characterPos.x === 5 && characterPos.y === 11) {
+      labyrinthe.classList.toggle('horizontal');
+    }
+
+    if (characterPos.x === 9 && characterPos.y === 10) {
+      window.alert("En raison d'un colis suspect, votre progression est ralenti !");
+      labyrinthe.classList.toggle('slow');
+    }
+
+    console.log("key:" + key); // left, up, right or down;
+
+    console.log(characterPos.x);
+    console.log(characterPos.y);
+  });
+}
+
+function end() {
+  oxo.screens.loadScreen('end');
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -133,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64339" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49472" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -276,3 +364,4 @@ function hmrAccept(bundle, id) {
   });
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
+//# sourceMappingURL=/script.d573be0b.map
