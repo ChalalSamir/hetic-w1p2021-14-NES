@@ -1,0 +1,51 @@
+/* ALL PAGES */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: none;
+  z-index: 0;
+  font-family: monospace;
+
+}
+
+.screen {
+  margin: none;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.screen__computer{
+
+  background-image: url(./img/born.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+  width: 80%;
+  margin-top: 6%;
+}
+
+.top {
+  top: 6%;
+  left: 31%;
+
+  position: absolute;
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+

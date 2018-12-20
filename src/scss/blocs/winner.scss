@@ -1,0 +1,150 @@
+@keyframes moveLeftToRight {
+    0%   {
+      bottom: 25%; 
+      opacity:0.33;
+    }
+    35%{
+        bottom: 30%;
+        opacity: 1;
+    }
+  }
+
+  @keyframes firework2 {
+	0% {
+		box-shadow: 
+      -10px 10px #E1DF4A,
+      10px 10px #E1DF4A,
+      10px -10px #E1DF4A,
+      -10px -10px #E1DF4A,
+      
+      -10px 0px #E1DF4A,
+      10px 0px #E1DF4A,
+      0px -10px #E1DF4A,
+      0px 10px #E1DF4A;
+	}
+  100% {
+    box-shadow: 
+      -50px 50px 10px rgba(255,255,255,0),
+      50px 50px 10px rgba(255,255,255,0),
+      50px -50px 10px rgba(255,255,255,0),
+      -50px -50px 10px rgba(255,255,255,0),
+    
+      -100px 0px 10px rgba(255,255,255,0),
+      100px 0px 10px rgba(255,255,255,0),
+      0px -100px 10px rgba(255,255,255,0),
+      0px 100px 10px rgba(255,255,255,0);
+  }
+}
+
+@keyframes firework3 {
+	0% {
+		box-shadow: 
+      -10px 10px #FCECC4,
+      10px 10px #FCECC4,
+      10px -10px #FCECC4,
+      -10px -10px #FCECC4,
+      
+      -10px 0px #FCECC4,
+      10px 0px #FCECC4,
+      0px -10px #FCECC4,
+      0px 10px #FCECC4;
+	}
+  100% {
+    box-shadow: 
+      -50px 50px 10px rgba(255,255,255,0),
+      50px 50px 10px rgba(255,255,255,0),
+      50px -50px 10px rgba(255,255,255,0),
+      -50px -50px 10px rgba(255,255,255,0),
+    
+      -100px 0px 10px rgba(255,255,255,0),
+      100px 0px 10px rgba(255,255,255,0),
+      0px -100px 10px rgba(255,255,255,0),
+      0px 100px 10px rgba(255,255,255,0);
+  }
+}
+
+.screen__text--picture{
+    height: 15vh;
+}
+
+.screen__message--winner{
+    width:34px;
+    height:34px;
+    animation: 1000ms, moveLeftToRight 10s linear;
+    transition: all 1s ease;
+    left: 45%;
+    bottom: 30%;
+    color:white;
+    position:absolute;
+    text-align: center;
+
+    h2{
+        font-size:40px;
+        text-align: center;
+    }
+    p{
+
+      color:white;
+      padding: 5px;
+    }
+  }
+ 
+ /*
+ .screen__succes{
+     margin-bottom: 40%;
+     text-align: center;
+ }
+ */
+
+.screen__message--FireWork{
+  animation: firework ease infinite 2.5s;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 40%;
+  bottom: 60%;
+	border-radius: 100%;
+}
+.screen__message--FireWork-2{
+  animation: firework2 ease infinite 5s;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 20%;
+  border-radius: 100%;
+}
+.screen__message--FireWork-3{
+  animation: firework3 ease infinite 3s;
+  position: absolute;
+  width: 10px;
+	height: 10px;
+  border-radius: 100%;
+  bottom: 35%;
+  left:68%;
+}
+@keyframes firework {
+	0% {
+		box-shadow: 
+      -10px 10px #35948E,
+      10px 10px #35948E,
+      10px -10px #35948E,
+      -10px -10px #35948E,
+      
+      -10px 0px #35948E,
+      10px 0px #35948E,
+      0px -10px #35948E,
+      0px 10px #35948E;
+	}
+  100% {
+    box-shadow: 
+      -50px 50px 10px rgba(255,255,255,0),
+      50px 50px 10px rgba(255,255,255,0),
+      50px -50px 10px rgba(255,255,255,0),
+      -50px -50px 10px rgba(255,255,255,0),
+    
+      -100px 0px 10px rgba(255,255,255,0),
+      100px 0px 10px rgba(255,255,255,0),
+      0px -100px 10px rgba(255,255,255,0),
+      0px 100px 10px rgba(255,255,255,0);
+  }
+}

@@ -1,0 +1,10 @@
+@import 'vendors/reset';
+@import 'global/layout';
+@import 'blocs/home.scss';
+@import 'blocs/game.scss';
+@import 'blocs/looser.scss';
+@import 'blocs/winner.scss';
+
+* {
+	box-sizing: border-box;
+}
