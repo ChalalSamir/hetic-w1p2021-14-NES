@@ -1,7 +1,7 @@
 var character;
 var labyrinthe;
 let characterPos = {x: 0, y: 0};
-var combination = [
+var combination = [  // Arrays for combination of div border 
   ["ltr","lt","tb","tb","t","tb","t","tb","tr","lt","tr","lt","tb","tbr"], 
   ["lrm","lr","lt","tr","lr","ltb","br","ltr","lb","r","lr","lb","tr","ltr"], 
   ["lb","a","br","lr","lr","lt","tb","b","tr","lbr","lb","tr","l","r"], 
@@ -16,12 +16,16 @@ var combination = [
   ["lb","tb","tb","tb","tb","tbr","lb","tb","tb","tb","br","lr","lb","br"]
 ];
 
-// Enter the game when pressing ente, if not already in it
+
+
+
+// Enter the game when pressing enter, if not already in it
 oxo.inputs.listenKey('enter', function() {
   if (oxo.screens.getCurrentScreen !== 'game') {
     oxo.screens.loadScreen('game', game);
   }
 });
+
 
 function game() {
   labyrinthe = document.getElementById('labyrinthe');
@@ -48,7 +52,7 @@ function game() {
     }
     console.log("key:"+key); // left, up, right or down;
     console.log(characterPos.x);
-    console.log(characterPos.y);   
+    console.log(characterPos.y);
   });
   
   oxo.inputs.listenKey('left', function(key) {
@@ -60,7 +64,17 @@ function game() {
     console.log(characterPos.x);
     console.log(characterPos.y);
     if (characterPos.x === 6 && characterPos.y === 3) {
-      labyrinthe.classList.toggle('horizontal')
+      let allCells = document.querySelectorAll('.labyrinthe__cell');
+      for(let jeej = 0; jeej < allCells.length; jeej++){
+        if(allCells[jeej].classList.contains("cell--top")){
+          allCells[jeej].classList.toggle('horizontalTop');
+        }
+        if(allCells[jeej].classList.contains("cell--bottom")){
+          allCells[jeej].classList.toggle('horizontalBottom');
+        }
+        allCells[jeej].classList.toggle('horizontal');
+      }
+      //labyrinthe.classList.toggle('horizontal');
     } 
   });
   
@@ -69,21 +83,31 @@ function game() {
       oxo.animation.move(character, 'right', 36);
       characterPos.x++;
     }
-    if (characterPos.x === 5 && characterPos.y === 11) {
-
-      labyrinthe.classList.toggle('horizontal');
-    } 
-    if (characterPos.x === 9 && characterPos.y === 10) {
-      window.alert("En raison d'un colis suspect, votre progression est ralenti !");
-      labyrinthe.classList.toggle('slow');
-    }
-    console.log("key:"+key); // left, up, right or down;
+    console.log("key:"+key); 
     console.log(characterPos.x);
     console.log(characterPos.y);
-  });
+    if (characterPos.x === 5 && characterPos.y === 11) {
+      let allCells = document.querySelectorAll('.labyrinthe__cell');
+      for(let jeej = 0; jeej < allCells.length; jeej++){
+        if(allCells[jeej].classList.contains("cell--top")){
+          allCells[jeej].classList.toggle('horizontalTop');
+        }
+        if(allCells[jeej].classList.contains("cell--bottom")){
+          allCells[jeej].classList.toggle('horizontalBottom');
+        }
+        allCells[jeej].classList.toggle('horizontal');
+      }
+      //labyrinthe.classList.toggle('horizontal');
+  } 
+  if (characterPos.x === 9 && characterPos.y === 10) {
+      window.alert("En raison d'un colis suspect, votre progression est ralenti !");
+      labyrinthe.classList.toggle('slow');
+  }   
+});
 }
 
+
+// load the win page 
 function end() {
   oxo.screens.loadScreen('end');
-  
 }
