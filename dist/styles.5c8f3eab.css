@@ -124,11 +124,6 @@ table {
 
 /* ALL PAGES */
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  margin: none;
-  z-index: 0;
   font-family: monospace; }
 
 .screen {
@@ -155,15 +150,6 @@ body {
   height: 90%;
   width: 80%;
   margin-top: 6%; }
-
-.top {
-  top: 6%;
-  left: 31%;
-  position: absolute;
-  font-size: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
 
 .screen__text--home {
   height: 20%;
@@ -196,15 +182,6 @@ body {
   font-weight: bold;
   font-size: 28px;
   color: #0BB4A4; }
-
-.screen__button--home {
-  border: solid white;
-  width: 140px;
-  height: 120px;
-  opacity: 0.5;
-  transition: opacity 0.5s; }
-  .screen__button--home:hover {
-    opacity: 1; }
 
 .screen__instruction {
   align-content: center;
@@ -378,6 +355,12 @@ body {
     box-shadow: -10px 10px #35948E, 10px 10px #35948E, 10px -10px #35948E, -10px -10px #35948E,  -10px 0px #35948E, 10px 0px #35948E, 0px -10px #35948E, 0px 10px #35948E; }
   100% {
     box-shadow: -50px 50px 10px rgba(255, 255, 255, 0), 50px 50px 10px rgba(255, 255, 255, 0), 50px -50px 10px rgba(255, 255, 255, 0), -50px -50px 10px rgba(255, 255, 255, 0), -100px 0px 10px rgba(255, 255, 255, 0), 100px 0px 10px rgba(255, 255, 255, 0), 0px -100px 10px rgba(255, 255, 255, 0), 0px 100px 10px rgba(255, 255, 255, 0); } }
+
+@keyframes color {
+  from {
+    color: white; }
+  to {
+    color: #662B91; } }
 
 * {
   box-sizing: border-box; }

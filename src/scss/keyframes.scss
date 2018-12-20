@@ -89,3 +89,13 @@
       0px 100px 10px rgba(255,255,255,0);
   }
 }
+
+@keyframes color {
+  from{
+      color: white;    
+  }
+
+  to {
+      color: #662B91;
+  }
+}
