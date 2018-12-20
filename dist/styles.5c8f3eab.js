@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./img/bg.png":[["bg.ad926f13.png","scss/img/bg.png"],"scss/img/bg.png"],"./img/born.png":[["born.1fcf15d6.png","scss/img/born.png"],"scss/img/born.png"],"./img/arrow.png":[["arrow.49132007.png","scss/img/arrow.png"],"scss/img/arrow.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./img/bg.png":[["bg.ad926f13.png","scss/img/bg.png"],"scss/img/bg.png"],"./img/born.png":[["born.1fcf15d6.png","scss/img/born.png"],"scss/img/born.png"],"./img/arrow.png":[["arrow.49132007.png","scss/img/arrow.png"],"scss/img/arrow.png"],"./img/characterHappy.png":[["characterHappy.cb3d325a.png","scss/img/characterHappy.png"],"scss/img/characterHappy.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49823" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50065" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

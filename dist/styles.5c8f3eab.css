@@ -311,26 +311,6 @@ body {
 .slow .game__square--perso {
   transition-duration: 0.5s; }
 
-@keyframes moveLeftToRight {
-  0% {
-    bottom: 25%;
-    opacity: 0.33; }
-  35% {
-    bottom: 30%;
-    opacity: 1; } }
-
-@keyframes firework2 {
-  0% {
-    box-shadow: -10px 10px #E1DF4A, 10px 10px #E1DF4A, 10px -10px #E1DF4A, -10px -10px #E1DF4A,  -10px 0px #E1DF4A, 10px 0px #E1DF4A, 0px -10px #E1DF4A, 0px 10px #E1DF4A; }
-  100% {
-    box-shadow: -50px 50px 10px rgba(255, 255, 255, 0), 50px 50px 10px rgba(255, 255, 255, 0), 50px -50px 10px rgba(255, 255, 255, 0), -50px -50px 10px rgba(255, 255, 255, 0), -100px 0px 10px rgba(255, 255, 255, 0), 100px 0px 10px rgba(255, 255, 255, 0), 0px -100px 10px rgba(255, 255, 255, 0), 0px 100px 10px rgba(255, 255, 255, 0); } }
-
-@keyframes firework3 {
-  0% {
-    box-shadow: -10px 10px #FCECC4, 10px 10px #FCECC4, 10px -10px #FCECC4, -10px -10px #FCECC4,  -10px 0px #FCECC4, 10px 0px #FCECC4, 0px -10px #FCECC4, 0px 10px #FCECC4; }
-  100% {
-    box-shadow: -50px 50px 10px rgba(255, 255, 255, 0), 50px 50px 10px rgba(255, 255, 255, 0), 50px -50px 10px rgba(255, 255, 255, 0), -50px -50px 10px rgba(255, 255, 255, 0), -100px 0px 10px rgba(255, 255, 255, 0), 100px 0px 10px rgba(255, 255, 255, 0), 0px -100px 10px rgba(255, 255, 255, 0), 0px 100px 10px rgba(255, 255, 255, 0); } }
-
 .screen__text--picture {
   height: 15vh; }
 
@@ -351,12 +331,6 @@ body {
     color: white;
     padding: 5px; }
 
-/*
- .screen__succes{
-     margin-bottom: 40%;
-     text-align: center;
- }
- */
 .screen__message--FireWork {
   animation: firework ease infinite 2.5s;
   position: absolute;
@@ -382,6 +356,33 @@ body {
   border-radius: 100%;
   bottom: 35%;
   left: 68%; }
+
+.screen__character {
+  width: 60%;
+  height: 60%;
+  background-image: url(characterHappy.cb3d325a.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+@keyframes moveLeftToRight {
+  0% {
+    bottom: 25%;
+    opacity: 0.33; }
+  35% {
+    bottom: 30%;
+    opacity: 1; } }
+
+@keyframes firework2 {
+  0% {
+    box-shadow: -10px 10px #E1DF4A, 10px 10px #E1DF4A, 10px -10px #E1DF4A, -10px -10px #E1DF4A,  -10px 0px #E1DF4A, 10px 0px #E1DF4A, 0px -10px #E1DF4A, 0px 10px #E1DF4A; }
+  100% {
+    box-shadow: -50px 50px 10px rgba(255, 255, 255, 0), 50px 50px 10px rgba(255, 255, 255, 0), 50px -50px 10px rgba(255, 255, 255, 0), -50px -50px 10px rgba(255, 255, 255, 0), -100px 0px 10px rgba(255, 255, 255, 0), 100px 0px 10px rgba(255, 255, 255, 0), 0px -100px 10px rgba(255, 255, 255, 0), 0px 100px 10px rgba(255, 255, 255, 0); } }
+
+@keyframes firework3 {
+  0% {
+    box-shadow: -10px 10px #FCECC4, 10px 10px #FCECC4, 10px -10px #FCECC4, -10px -10px #FCECC4,  -10px 0px #FCECC4, 10px 0px #FCECC4, 0px -10px #FCECC4, 0px 10px #FCECC4; }
+  100% {
+    box-shadow: -50px 50px 10px rgba(255, 255, 255, 0), 50px 50px 10px rgba(255, 255, 255, 0), 50px -50px 10px rgba(255, 255, 255, 0), -50px -50px 10px rgba(255, 255, 255, 0), -100px 0px 10px rgba(255, 255, 255, 0), 100px 0px 10px rgba(255, 255, 255, 0), 0px -100px 10px rgba(255, 255, 255, 0), 0px 100px 10px rgba(255, 255, 255, 0); } }
 
 @keyframes firework {
   0% {
