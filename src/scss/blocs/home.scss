@@ -59,18 +59,12 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    transition: transform 0.5s ease-out;
-
-
-    &:hover {
-      transform: scale(1.2);
-    }
 
   }
 
   .screen__instruction--title {
     font-size: 28px;
-    color: #0BB4A4;
+    color: white;
     margin: 15px;
   }
 
