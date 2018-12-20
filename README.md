@@ -1,5 +1,5 @@
 Site Netlify :
-  https://lostinchatelet-by-nesgang.netlify.com/
+ https://thirsty-murdock-50044a.netlify.com/
 
 # `OXO` game library
 
